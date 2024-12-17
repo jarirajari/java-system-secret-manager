@@ -24,7 +24,8 @@ List keys and extract GPG KEY ID
 gpg --list-keys
 ```
 
-Initialize secret storage with key and check rights
+Initialize secret storage with key and check rights.
+For custom location use PASSWORD_STORE_DIR
 ```
 pass init <GPG KEY ID>
 ls -ld /home/$USER/.password-store
@@ -33,6 +34,7 @@ ls -ld /home/$USER/.password-store
 # Basic ops
 
 Create secret, for example 'master/unlock'
+For multiline secrets use '-m' switch
 ```
 pass insert master/unlock
 ```
