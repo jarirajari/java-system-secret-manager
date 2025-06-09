@@ -25,7 +25,7 @@ gpg --list-keys
 ```
 
 Initialize secret storage with key and check rights.
-For custom location use PASSWORD_STORE_DIR
+For custom location use **PASSWORD_STORE_DIR** environment variable!
 ```
 pass init <GPG KEY ID>
 ls -ld /home/$USER/.password-store
@@ -53,6 +53,12 @@ pass edit master/unlock
 Destroy secret
 ```
 pass rm master/unlock
+```
+
+Check if password was retrieved from the store (after pass command)
+```
+# Should print zero (0) when success and non-zero if not
+echo $?
 ```
 
 # Turn pass into secret manager
