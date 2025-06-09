@@ -91,3 +91,17 @@ Then use the passwd command within GPG to remove the passphrase
 # Java integration
 
 see `SystemSecretManager.java` for static method.
+
+# Python integration
+
+see `SystemSecretManager.py`. `secrets_dir` points to custom pass vault location on the file system.
+
+```
+from system_secret_manager import secret_default_vault, secret_custom_vault
+```
+OR
+```
+python3 SystemSecretManager.py 
+Usage: python3 system_secret_manager.py <secret/path> [<secrets_dir>]
+```
+
